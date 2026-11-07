@@ -1,0 +1,6 @@
+{
+  "name": "TO_OT Player",
+  "description": "Smart Multi-Lane Audio Hub & Mixer with independent playback, 5-band equalizer, crossfader, and sleep timer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

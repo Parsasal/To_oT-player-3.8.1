@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TO_OT Player</string>
+    <string name="widget_description">TO_OT Audio Player Quick Controls</string>
+    <string name="playback_channel_name">Audio Playback Controls</string>
+    <string name="playback_channel_desc">Shows playback controls and persistent audio session status</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_stop">Stop</string>
+</resources>

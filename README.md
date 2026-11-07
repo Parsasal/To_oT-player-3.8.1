@@ -1,11 +1,19 @@
-<div align="center">
+# TO_OT Player v3.8.0
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A high-performance, multi-lane audio workstation and smart player for Android, built with Jetpack Compose and Material 3.
 
-  <h1>Built with AI Studio</h2>
+## What's New in v3.8.0 (Build 46)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 🎵 Device Audio & Downloads Explorer Rebuild
+- **Complete Redesign:** Ground-up overhaul with clean Material 3 dark studio glass aesthetics.
+- **Batch Management:** Added multi-track selection with floating bottom bar, fast audio preview playback, and instant target lane assignment chips.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### ⌨️ Seamless Keyboard Dismissal
+- **Scroll-to-Dismiss (`onDrag`):** Integrated bidirectional `nestedScroll` connection to immediately dismiss the soft keyboard upon list scrolling or dragging.
+- **Tap-Outside Unfocus:** Instant focus clearance and keyboard suppression whenever tapping anywhere outside the search field without blocking item clicks.
+- **Action Buttons:** Added an explicit hide-keyboard icon button and wired IME `Search`/`Done` actions.
 
-</div>
+### ⚡ Performance & Architecture Overhaul
+- **Lifecycle-Aware State Collection:** Upgraded all `StateFlow` collections to `collectAsStateWithLifecycle()` to eliminate background CPU/battery drain.
+- **Lazy Initialization:** Converted heavy secondary services (`MasterRecorder`, `VideoAudioExtractor`, `DeviceAudioScanner`, `AiMusicSearchService`) to lazy initialization for lightning-fast cold app launches.
+- **Memory & Scanner Safety:** Added direct `SIZE > 0` database query filtering and memory bounds safeguards (`maxResults`) to eliminate `OutOfMemoryError` risks on large audio libraries.

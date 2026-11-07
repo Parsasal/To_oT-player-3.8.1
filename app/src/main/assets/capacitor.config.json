@@ -1,0 +1,11 @@
+{
+  "appId": "com.tootplayer.audiohub",
+  "appName": "TO_OT Player",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}

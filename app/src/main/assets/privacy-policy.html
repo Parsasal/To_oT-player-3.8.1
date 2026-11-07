@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Data Safety - TO_OT Player</title>
+    <meta name="description" content="Official Privacy Policy and Data Safety declaration for TO_OT Player on Google Play and Cafe Bazaar. Zero-data collection, local-first architecture.">
+    <style>
+        :root {
+            --ui-scale: 1.03;
+            --bg-color: #0A0D14;
+            --card-bg: #121826;
+            --card-border: #1E293B;
+            --accent-cyan: #06B6D4;
+            --accent-violet: #8B5CF6;
+            --accent-emerald: #10B981;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-size: calc(1rem * var(--ui-scale));
+            line-height: 1.65;
+            padding: calc(24px * var(--ui-scale)) calc(16px * var(--ui-scale));
+        }
+
+        .container {
+            max-width: calc(860px * var(--ui-scale));
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: calc(32px * var(--ui-scale)) 0 calc(24px * var(--ui-scale));
+            border-bottom: 1px solid var(--card-border);
+            margin-bottom: calc(32px * var(--ui-scale));
+        }
+
+        .logo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: calc(8px * var(--ui-scale));
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(139, 92, 246, 0.15));
+            border: 1px solid var(--accent-cyan);
+            border-radius: 999px;
+            padding: calc(6px * var(--ui-scale)) calc(16px * var(--ui-scale));
+            font-size: calc(0.85rem * var(--ui-scale));
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: calc(16px * var(--ui-scale));
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: calc(2.2rem * var(--ui-scale));
+            font-weight: 800;
+            margin-bottom: calc(8px * var(--ui-scale));
+            background: linear-gradient(135deg, #06B6D4, #38BDF8, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: calc(1rem * var(--ui-scale));
+        }
+
+        .meta-tag {
+            margin-top: calc(12px * var(--ui-scale));
+            font-size: calc(0.85rem * var(--ui-scale));
+            color: var(--accent-emerald);
+            font-weight: 600;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: calc(16px * var(--ui-scale));
+            padding: calc(24px * var(--ui-scale));
+            margin-bottom: calc(20px * var(--ui-scale));
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: calc(12px * var(--ui-scale));
+            margin-bottom: calc(14px * var(--ui-scale));
+        }
+
+        .card-header h2 {
+            font-size: calc(1.25rem * var(--ui-scale));
+            color: var(--text-primary);
+        }
+
+        .badge-zero {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+            border: 1px solid var(--accent-emerald);
+            padding: calc(3px * var(--ui-scale)) calc(10px * var(--ui-scale));
+            border-radius: calc(6px * var(--ui-scale));
+            font-size: calc(0.75rem * var(--ui-scale));
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: calc(12px * var(--ui-scale));
+            font-size: calc(0.95rem * var(--ui-scale));
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: calc(12px * var(--ui-scale));
+        }
+
+        li {
+            position: relative;
+            padding-left: calc(24px * var(--ui-scale));
+            margin-bottom: calc(8px * var(--ui-scale));
+            color: var(--text-secondary);
+            font-size: calc(0.95rem * var(--ui-scale));
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .permission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: calc(12px * var(--ui-scale));
+            font-size: calc(0.9rem * var(--ui-scale));
+        }
+
+        .permission-table th, .permission-table td {
+            text-align: left;
+            padding: calc(10px * var(--ui-scale)) calc(12px * var(--ui-scale));
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .permission-table th {
+            color: var(--text-primary);
+            background-color: rgba(255, 255, 255, 0.03);
+            font-weight: 600;
+        }
+
+        .code-perm {
+            font-family: monospace;
+            color: var(--accent-cyan);
+            font-size: calc(0.85rem * var(--ui-scale));
+        }
+
+        .contact-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: calc(16px * var(--ui-scale));
+            margin-top: calc(12px * var(--ui-scale));
+        }
+
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            min-width: 44px;
+            gap: calc(8px * var(--ui-scale));
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: calc(8px * var(--ui-scale));
+            padding: calc(8px * var(--ui-scale)) calc(14px * var(--ui-scale));
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: calc(0.9rem * var(--ui-scale));
+        }
+
+        .contact-pill:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .persian-section {
+            direction: rtl;
+            text-align: right;
+            border-top: 2px dashed var(--card-border);
+            padding-top: calc(32px * var(--ui-scale));
+            margin-top: calc(40px * var(--ui-scale));
+        }
+
+        .persian-section li {
+            padding-left: 0;
+            padding-right: calc(24px * var(--ui-scale));
+        }
+
+        .persian-section li::before {
+            left: auto;
+            right: 0;
+        }
+
+        .persian-section .permission-table th, 
+        .persian-section .permission-table td {
+            text-align: right;
+        }
+
+        footer {
+            text-align: center;
+            padding: calc(32px * var(--ui-scale)) 0 calc(16px * var(--ui-scale));
+            color: var(--text-muted);
+            font-size: calc(0.85rem * var(--ui-scale));
+            border-top: 1px solid var(--card-border);
+            margin-top: calc(40px * var(--ui-scale));
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-badge">Local-First Audio Engine</div>
+        <h1>TO_OT Player</h1>
+        <div class="subtitle">Privacy Policy & Data Safety Declaration</div>
+        <div class="meta-tag">100% On-Device Processing • Zero Telemetry • Store Compliant</div>
+    </header>
+
+    <!-- SECTION 1: Zero Data Collection -->
+    <div class="card">
+        <div class="card-header">
+            <h2>1. Zero-Data Collection Declaration</h2>
+            <span class="badge-zero">ZERO DATA COLLECTED</span>
+        </div>
+        <p><strong>TO_OT Player</strong> is engineered strictly around a <strong>Local-First Architecture</strong>. We firmly respect your digital sovereignty and privacy:</p>
+        <ul>
+            <li><strong>No Analytics or Telemetry:</strong> We do not embed any analytics SDKs, trackers, advertising identifiers, or logging servers.</li>
+            <li><strong>No Account Required:</strong> The application functions completely offline without requiring sign-up, sign-in, or personal information.</li>
+            <li><strong>No External File Transmission:</strong> Audio files, custom mix presets, playlists, and recordings reside solely within your local device sandbox and are never uploaded to any remote server.</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 2: Permissions Breakdown -->
+    <div class="card">
+        <div class="card-header">
+            <h2>2. Minimal Android Permissions Breakdown</h2>
+        </div>
+        <p>TO_OT Player requests only strictly essential permissions required for client-side multi-track audio playback and system integration:</p>
+        
+        <table class="permission-table">
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose & Scope</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code-perm">READ_MEDIA_AUDIO</span><br><span class="code-perm">READ_EXTERNAL_STORAGE</span></td>
+                    <td>Used exclusively to allow you to browse and select local audio tracks for playback and multi-lane audio mixing. Files are read solely on-device.</td>
+                </tr>
+                <tr>
+                    <td><span class="code-perm">FOREGROUND_SERVICE</span><br><span class="code-perm">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span></td>
+                    <td>Enables uninterrupted background music playback, persistent lock screen controls, and notification media session controls.</td>
+                </tr>
+                <tr>
+                    <td><span class="code-perm">WAKE_LOCK</span></td>
+                    <td>Prevents the CPU from sleeping during active audio playback to prevent audio stuttering or dropouts when your screen turns off.</td>
+                </tr>
+                <tr>
+                    <td><span class="code-perm">POST_NOTIFICATIONS</span></td>
+                    <td>Allows the app to display playback status, current track info, and playback buttons in the Android notification shade (Android 13+).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 3: Store Compliance -->
+    <div class="card">
+        <div class="card-header">
+            <h2>3. Google Play & Cafe Bazaar Compliance</h2>
+        </div>
+        <p>This policy complies fully with the <strong>Google Play Developer Program Policy</strong> (User Data & Privacy guidelines) and <strong>Cafe Bazaar Developer Guidelines</strong>:</p>
+        <ul>
+            <li><strong>Data Safety Section:</strong> TO_OT Player collects "No data shared" and "No data collected".</li>
+            <li><strong>Prohibited Behaviors:</strong> No hidden background data synchronization, no location tracking, no contact access, and no third-party ad networks.</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 4: Contact Information -->
+    <div class="card">
+        <div class="card-header">
+            <h2>4. Developer Information & Contact</h2>
+        </div>
+        <p>If you have any questions, feedback, or security inquiries regarding TO_OT Player, please reach out directly:</p>
+        <div class="contact-box">
+            <div class="contact-pill"><strong>Developer:</strong> Parsa Salami</div>
+            <a href="mailto:parsa.sal@gmail.com" class="contact-pill"><strong>Email:</strong> parsa.sal@gmail.com</a>
+            <a href="https://t.me/parsa_sal" class="contact-pill" target="_blank"><strong>Telegram:</strong> @parsa_sal</a>
+            <div class="contact-pill"><strong>Package ID:</strong> com.tootplayer.audiohub</div>
+            <div class="contact-pill"><strong>Version:</strong> 3.0.0</div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: Persian Version -->
+    <div class="persian-section">
+        <header>
+            <div class="logo-badge">میکسر و پخش‌کننده صوتی محلی</div>
+            <h1>سیاست حریم خصوصی و امنیت داده‌ها</h1>
+            <div class="subtitle">نرم‌افزار TO_OT Player (توت پلیر)</div>
+            <div class="meta-tag">پردازش کاملاً آفلاین • عدم جمع‌آوری داده • سازگار با کافه‌بازار و گوگل‌پلی</div>
+        </header>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>۱. بیانیه عدم جمع‌آوری هرگونه اطلاعات کاربر</h2>
+                <span class="badge-zero">۱۰۰٪ آفلاین و محلی</span>
+            </div>
+            <p>نرم‌افزار <strong>TO_OT Player</strong> با معماری <strong>محلی (Local-First)</strong> طراحی شده و به حریم خصوصی شما احترام کامل می‌گذارد:</p>
+            <ul>
+                <li><strong>عدم ارسال داده به سرور:</strong> هیچ‌گونه داده آماری، رفتار کاربر، مشخصات دستگاه یا فایل صوتی به هیچ سرور خارجی منتقل نمی‌شود.</li>
+                <li><strong>بدون نیاز به ثبت‌نام:</strong> استفاده از تمامی امکانات نرم‌افزار بدون حساب کاربری و کاملاً آفلاین ممکن است.</li>
+                <li><strong>امنیت فایل‌ها:</strong> آهنگ‌ها و ضبط‌های شما تنها در حافظه دستگاه شما باقی می‌مانند.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>۲. دسترسی‌های مورد نیاز در اندروید</h2>
+            </div>
+            <p>دسترسی‌های درخواست‌شده صرفاً برای عملکردهای اساسی پخش موسیقی و کنترل پس‌زمینه است:</p>
+            <ul>
+                <li><strong>دسترسی به فایل‌های صوتی (READ_MEDIA_AUDIO):</strong> فقط برای انتخاب و پخش آهنگ‌های انتخابی شما در لاین‌های میکسر.</li>
+                <li><strong>سرویس پس‌زمینه موسیقی (FOREGROUND_SERVICE):</strong> جهت پخش مداوم آهنگ در زمان قفل بودن صفحه و نمایش نوتیفیکیشن کنترل موزیک.</li>
+                <li><strong>جلوگیری از توقف پردازنده (WAKE_LOCK):</strong> برای جلوگیری از لکنت و قطعی صدا هنگام خاموش شدن نمایشگر.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>۳. اطلاعات ارتباط با سازنده</h2>
+            </div>
+            <div class="contact-box">
+                <div class="contact-pill"><strong>سازنده و توسعه‌دهنده:</strong> پارسا سلامی</div>
+                <a href="mailto:parsa.sal@gmail.com" class="contact-pill"><strong>ایمیل:</strong> parsa.sal@gmail.com</a>
+                <a href="https://t.me/parsa_sal" class="contact-pill" target="_blank"><strong>تلگرام:</strong> parsa_sal@</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>TO_OT Player &copy; 2026 • Developer: Parsa Salami • All rights reserved.</p>
+        <p style="margin-top: 4px; font-size: 0.75rem;">Last Updated: August 2026 / شهریور ۱۴۰۵</p>
+    </footer>
+</div>
+
+</body>
+</html>
